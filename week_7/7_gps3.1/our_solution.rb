@@ -55,12 +55,22 @@ end
 
 
 # DRIVER CODE GOES HERE. 
+def assert
+  raise "Wrong answer!" unless yield
+end
+
 list = GroceryList.new('list')
 list.add("apple", 5)
 list.add("orange", 3)
-list.items
 list.remove("orange")
+final_list= list.items
 
+assert { final_list= "Name: apple Price: 5" }
+
+#Reflection
+# I had a difficult time with this challenge. Selecting the correct value in a nested hash confused the hell out of me. 
+# Luckily, my partner and I were able to talk things through and research the appropriate techniques. I'm also getting more
+# comfortable with instane variables as well as attr_accessor.
 
 
 

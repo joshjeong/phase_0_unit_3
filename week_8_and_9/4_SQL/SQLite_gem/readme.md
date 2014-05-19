@@ -17,8 +17,51 @@ Statmaster is supporting a press conference in 2 hours and needs your program to
 ## Release 0: Open the Database
 You should have the `congress_poll_results.db` in this challenge directory (It may not show up in the directory structure, but it should be visible in the terminal by typing `ls`. Open it up by typing  `sqlite3 congress_poll_results.db` in the correct local directory. To access a database from within ruby code, you need to install the sqlite3 gem.  Run `gem install sqlite3` from the command line. If you have trouble, try googling the error or ask your cohort-mates for help.
 
+    sqlite> sqlite3 congress_poll_results.db;
+
 ## Release 1: Poke around the Database
 Take a look at the schemas included.  Type `.schema`.  There should be 3 tables, `congress_members`, `voters`, and `votes`.  Do a couple `select` statements on the congress_members table. (This is where most of the stats will be coming from).
+
+    sqlite> .schema
+    CREATE TABLE congress_members (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(64) NOT NULL,
+    party VARCHAR(64) NOT NULL,
+    location VARCHAR(64) NOT NULL,
+    grade_1996 REAL, 
+    grade_current REAL, 
+    years_in_congress INTEGER,
+    dw1_score REAL
+    , created_at DATETIME, updated_at DATETIME);
+    CREATE TABLE voters (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name VARCHAR(64) NOT NULL,
+    last_name  VARCHAR(64) NOT NULL,
+    gender VARCHAR(64) NOT NULL,
+    party VARCHAR(64) NOT NULL,
+    party_duration INTEGER, 
+    age INTEGER,
+    married INTEGER,
+    children_count INTEGER,
+    homeowner INTEGER, 
+    employed INTEGER, 
+    created_at DATETIME NOT NULL,
+    updated_at DATETIME NOT NULL
+    );
+    CREATE TABLE votes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    voter_id INTEGER,
+    politician_id INTEGER,
+    created_at DATETIME NOT NULL,
+    updated_at DATETIME NOT NULL,
+    FOREIGN KEY(voter_id) REFERENCES voters(id),
+    FOREIGN KEY(politician_id) REFERENCES congress_members(id)
+    );
+
+
+    sqlite> SELECT * FROM votes;
+    sqlite> select grade_1996 from congress_members
+
 
 ## Release 2: Run Existing Code
 Run your [my_solution.rb](my_solution.rb) file. It should have some existing code that accesses the database, and attempts some queries.  Run the code.  Is there an error?  There should be!

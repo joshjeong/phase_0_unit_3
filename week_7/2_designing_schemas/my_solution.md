@@ -1,7 +1,7 @@
 # U3.W7: Designing Schemas
 
 
-#### I worked on this challenge [by myself, with: ]
+#### I worked on this challenge [by myself]
 
 
 ## Release 0: Student Roster Schema
@@ -16,13 +16,15 @@
 
 
 ## Release 3: Many to Many Schema
-<!-- display your image inline here -->
+<img src= ../imgs/publisher_schema.jpg>
 
 
 ## Release 4: Design your own Schema
-Description of what you're modeling: 
+Description of what you're modeling:
+one to one: each employee has only one cubicle
+one to many: an employee can only belong to one company but a company can have many employees
 
-<!-- display your one-to-one image inline here -->
-<!-- display your many-to-many image inline here -->
+<img src= ../imgs/company_schema.jpg>
 
 ## Release 5: Reflection
+First time building a table in SQL designer. It was cool to create visual depiction and connect them using foreign keys. I'm curious to see how we can call for information from multiple tables.

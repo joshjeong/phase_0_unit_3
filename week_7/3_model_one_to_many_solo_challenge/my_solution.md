@@ -28,18 +28,18 @@ Updated
 <img src= "../imgs/twitter_complete.jpg">
 
 ## Release 4: SQL Statements
-# - all the tweets for a certain user id
+### - all the tweets for a certain user id
    SELECT tweet_post FROM tweets JOIN users
      ON user_id= users.id
        WHERE users.id= 22
-# - the tweets for a certain user id that were made after last Wednesday (whenever last Wednesday was for you)
+### - the tweets for a certain user id that were made after last Wednesday (whenever last Wednesday was for you)
    SELECT tweet_post FROM tweets JOIN users
      ON user_id= users.id
        WHERE users.id= 22 AND created_at >= '05/18/2014'
-# - all the tweets associated with a given user's twitter handle
+### - all the tweets associated with a given user's twitter handle
    SELECT tweet_post FROM tweets JOIN users
       LIKE tweet_post IN '%twitter_account_user 
-# - the twitter handle associated with a given tweet id
+### - the twitter handle associated with a given tweet id
    SELECT twitter_account_id FROM users JOIN tweets
      ON users.id= tweets.user_id
        WHERE users.id= 5

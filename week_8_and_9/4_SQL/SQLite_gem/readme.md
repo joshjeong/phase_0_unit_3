@@ -19,7 +19,7 @@ You should have the `congress_poll_results.db` in this challenge directory (It m
 
     sqlite> sqlite3 congress_poll_results.db;
     
-<img src= "congress_schema.jpg">
+<img src= "/congress_schema.jpg">
 
 ## Release 1: Poke around the Database
 Take a look at the schemas included.  Type `.schema`.  There should be 3 tables, `congress_members`, `voters`, and `votes`.  Do a couple `select` statements on the congress_members table. (This is where most of the stats will be coming from).

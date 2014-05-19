@@ -5,15 +5,14 @@
 
 
 ## Release 0: Student Roster Schema
-<!-- display your image inline here -->
-
+<img src= ../imgs/students.jpg>
 
 ## Release 1: One to Many Schema
-<!-- display your image inline here -->
+<img src= ../imgs/users_orders.jpg>
 
 
 ## Release 2: One to One Schema
-<!-- display your image inline here -->
+<img src= ../imgs/facebook.jpg>
 
 
 ## Release 3: Many to Many Schema

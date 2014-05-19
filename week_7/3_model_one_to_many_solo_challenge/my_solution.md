@@ -31,6 +31,8 @@
 all the tweets for a certain user id
 
 
+
+
   SELECT tweet_post FROM tweets JOIN users
     ON user_id= users.id
       WHERE users.id= 22

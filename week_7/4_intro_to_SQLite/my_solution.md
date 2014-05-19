@@ -52,10 +52,27 @@
     Error: column email is not unique
 
 ## Release 3: Add a column
-<!-- paste your terminal output here -->
 
+    sqlite> ALTER TABLE users ADD COLUMN nickname VARCHAR(64);
+    sqlite> SELECT * FROM users;
+    id          first_name  last_name   email                  created_at           updated_at            nickname  
+    ----------  ----------  ----------  ---------------------  -------------------  -------------------  ----------  
+    1           Kimmey      Lin         kimmy@devbootcamp.com  2014-05-19 16:33:48  2014-05-19 16:33:48                 
+    2           Josh        Jeong       jcjeong@gmail.com      2014-05-19 16:36:27  2014-05-19 16:36:27                      
 ## Release 4: Change a value
-<!-- paste your terminal output here -->
+
+    sqlite> UPDATE users
+    ...> SET nickname='Kimchee'
+    ...> WHERE id=1;
+    sqlite> UPDATE users
+    ...> SET nickname='Pudgy'
+    ...> WHERE id=2;
+    sqlite> SELECT * FROM users;
+    id          first_name  last_name   email                  created_at           updated_at            nickname  
+    ----------  ----------  ----------  ---------------------  -------------------  -------------------  ----------  
+    1           Kimmey      Lin         kimmy@devbootcamp.com  2014-05-19 16:33:48  2014-05-19 16:33:48   Kimchee   
+    2           Josh        Jeong       jcjeong@gmail.com      2014-05-19 16:36:27  2014-05-19 16:36:27   Pudgy                  
 
 ## Release 5: Reflect
-<!-- Add your reflection here -->
+It's a different perspective seeing how data is created and manipulated on the back end. However, after using SQLite I find it extremely difficult to manipulate the data especially if a mistake is made. You are unable to delete columns as well as change column names.
+

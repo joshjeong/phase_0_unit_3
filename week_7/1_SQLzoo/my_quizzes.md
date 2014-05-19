@@ -5,10 +5,11 @@
 
 
 ### My Quiz Results:
-<img src= "https://github.com/joshjeong/phase_0_unit_3/blob/master/week_7/imgs/sqlzoo_quiz.png">
+<img src= "../imgs/sqlzoo_quiz.png">
 
 
 
 
 
 ### Reflection
+The tutorials and quizzes were pretty straight forward. I'm glad we got to dip our toes into SQL. I was a perviously an analyst and always heard about SQL but never had the time to learn. I'm excited to tie everything together!

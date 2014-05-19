@@ -15,10 +15,10 @@ Created Date
 Updated
 
 ## Release 1: Tweet Fields
-> Tweet
-> Photo
-> Location
-> Created Date
+Tweet
+Photo
+Location
+Created Date
 
 ## Release 2: Explain the relationship
 > The relationship between `users` and `tweets` is: 
@@ -38,7 +38,7 @@ Updated
        WHERE users.id= 22 AND created_at >= '05/18/2014'
 ### - all the tweets associated with a given user's twitter handle
    SELECT tweet_post FROM tweets JOIN users
-      LIKE tweet_post IN '%twitter_account_user 
+      WHERE twitter_account_user LIKE '%KingJeongIll%' 
 ### - the twitter handle associated with a given tweet id
    SELECT twitter_account_id FROM users JOIN tweets
      ON users.id= tweets.user_id

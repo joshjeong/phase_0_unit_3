@@ -28,7 +28,7 @@
 <img src= "../imgs/twitter_complete.jpg">
 
 ## Release 4: SQL Statements
-### - all the tweets for a certain user id
+- all the tweets for a certain user id
   
   
   SELECT tweet_post FROM tweets JOIN users

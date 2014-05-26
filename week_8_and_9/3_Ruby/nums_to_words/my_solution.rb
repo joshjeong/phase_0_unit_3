@@ -25,39 +25,34 @@ double_digit= { "twenty" => 2, "thirty" => 3, "forty" => 4, "fifty" => 5,
   "sixty" => 6, "seventy" => 7, "eighty" => 8, "ninety" => 9}
 
   if number > 0 && number <10
-    puts single_digit.key(number)
+    return single_digit.key(number)
   elsif number >= 10 && number < 20
-    puts teens.key(number)
+    return teens.key(number)
   elsif number >= 20 && number <100
     numb_split= number.to_s.split(//)
-    puts "#{double_digit.key(numb_split[0].to_i)} #{single_digit.key(numb_split[1].to_i)}"
+    return "#{double_digit.key(numb_split[0].to_i)} #{single_digit.key(numb_split[1].to_i)}"
   elsif number == 100
-    puts "one hundred"
+    return "one hundred"
     end
 
 end
 
 
-
-in_words(2)
-in_words(16)
-in_words(97)
-in_words(100)
-
-
-
 # 4. Refactored Solution
 
 
-
-
-
-
 # 1. DRIVER TESTS/ASSERT STATEMENTS GO BELOW THIS LINE
+def assert
+  raise "Error!!" unless yield
+end
 
-
-
-
+assert { in_words(2) == "two" }
+assert { in_words(16) == "sixteen" }
+assert { in_words(97) == "ninety seven" }
+assert { in_words(100) == "one hundred" }
 
 
 # 5. Reflection 
+
+# The hardest part of this challenge was getting the logic down. The Pseudocode came to be very crucial.
+# Breaking the numbers into groups helped to see exactly what can be recycled and what had to be created.

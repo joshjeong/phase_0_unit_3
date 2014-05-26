@@ -8,19 +8,40 @@
 
 
 # 3. Initial Solution
+
 class Rectangle
   attr_accessor :width, :height
 
   def initialize(width, height)
-    @width  = width
-    @height = height
+    @width= width
+    @height= height
   end
 
-  def ==(other)
-    (other.width  == self.width && other.height == self.height ) ||
-    (other.height == self.width && other.width  == self.height )
+  def area
+    @width * @height
   end
+
+  def perimeter
+    (2 * @width) + (2 * @height)
+  end
+
+  def diagonal
+    sqrt(@width^2 + @height^2)
+  end
+
+  def square?
+    @width== @height ? true : false
+  end
+
+
+  # def ==(other)
+  #   (other.width  == self.width && other.height == self.height ) ||
+  #   (other.height == self.width && other.width  == self.height )
+  # end
+
 end
+
+
 
 
 

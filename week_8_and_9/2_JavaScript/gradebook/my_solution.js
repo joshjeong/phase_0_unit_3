@@ -18,36 +18,39 @@ var scores = [ [80, 70, 70, 100],
                [75, 70, 80, 75],
                [100, 90, 95, 85] ]
 
+function average(score_arr) {
+  sum= 0
+  for (var i = 0; i< score_arr.length; i++) {
+    sum+= score_arr[i];
+  }
+  return sum/score_arr.length;
+}
+
+var gradebook= {}
+
+gradebook.Joseph= {}
+gradebook.Susan= {}
+gradebook.William= {}
+gradebook.Elizabeth= {}
+
+gradebook.Joseph.testScores= scores[0]
+gradebook.Susan.testScores= scores[1]
+gradebook.William.testScores= scores[2]
+gradebook.Elizabeth.testScores= scores[3]
+
+gradebook.addScore= function(student, score) {
+  gradebook[student]["testScores"].push(score);
+}
+
+gradebook.getAverage= function(student) {
+  return average(gradebook[student]["testScores"]);
+}
 
 
+// Reflect:
 
-
-
-// __________________________________________
-// Write your code below.
-
-
-
-
-
-
-// __________________________________________
-// Refactored Solution
-
-
-
-
-
-
-
-
-// __________________________________________
-// Reflect
-
-
-
-
-
+// I had a little trouble with creating the function but just had to dust off some cobwebs to remember some javascript. 
+// I keep getting confused with Ruby syntax. Must. Practice. More.
 
 
 

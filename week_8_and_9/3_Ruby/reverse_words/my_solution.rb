@@ -1,9 +1,13 @@
 # U3.W8-9: Reverse Words
 
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself].
 
-# 2. Pseudocode
+# # 2. Pseudocode
+# Break sentence into array
+# reverse each individual string and add a space
+# if value is at the end of an array do not add a space
+# join array and puts a final string
 
 
 
@@ -26,18 +30,16 @@ def reverse_words(word)
 end
 
 print reverse_words("Ich bin ein Berliner")
+
 # 4. Refactored Solution
 
-
-
-
-
-
 # 1. DRIVER TESTS/ASSERT STATEMENTS GO BELOW THIS LINE
+def assert
+  raise "ERROR!" unless yield 
+end
 
+sent= "Hello my name is Josh"
 
-
-
-
-
-# 5. Reflection 
+assert { reverse_words(sent) == "olleH ym eman si hsoJ" }
+# # 5. Reflection 
+# This challenge reminded me of the num to words exercise.

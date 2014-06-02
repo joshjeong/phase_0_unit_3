@@ -1,12 +1,6 @@
 // U3.W8-9: 
 
 
-// I worked on this challenge [by myself, with: ].
-
-// 2. Pseudocode
-// U3.W8-9: 
-
-
 // I worked on this challenge with:
 // 1) Josh Jeong
 // 2) Rj Bernaldo
@@ -20,7 +14,7 @@
 # As a user, I want to add item with its quantity
 */
 
-// 3. Initial Solution
+// 3. Ruby code
 /*
 class GroceryList
     attr_accessor :name, :list
@@ -47,8 +41,10 @@ class GroceryList
         end
       end
     end    
-end    
-*/
+end
+
+JavaScript Translation:
+*/ 
 
 var GroceryList = function(name) {
     this.name = name;
@@ -89,26 +85,8 @@ list.remove("orange")
 list.items();
 
 
-// 5. Reflection 
-
-
-// 3. Initial Solution
-
-
-
-
-// 4. Refactored Solution
-
-
-
-
-
-
-// 1. DRIVER TESTS/ASSERT STATEMENTS GO BELOW THIS LINE
-
-
-
-
-
-
-// 5. Reflection 
+/* 5. Reflection 
+Translating the code from one language to another is really helping me understand JavaScript.
+This was also my first pairing session in person which made is so muche easier.
+Very excited to start school!!!
+*/

@@ -76,3 +76,5 @@ p linear_search(students, "Alex") == 0
 p linear_search(students, "NOT A STUDENT") == -1
 
 # 5. Reflection 
+# I remember reading about named arguments in pootr which was perfect for this challenge. I worked on this with Rj
+# and we went throught this relatively well. 

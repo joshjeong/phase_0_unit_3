@@ -22,19 +22,19 @@ class Rectangle
   end
 
   def area
-    @width * @height
+    width * height
   end
 
   def perimeter
-    (2 * @width) + (2 * @height)
+    (2 * width) + (2 * height)
   end
 
   def diagonal
-    Math.sqrt(@width**2 + @height**2)
+    Math.sqrt((width**2) + (height**2))
   end
 
   def square?
-    @width= @height ? true : false
+    width == height ? true : false
   end
 end
 
@@ -43,21 +43,21 @@ end
 
 
 # 1. DRIVER TESTS GO BELOW THIS LINE
-rectangle= Rectangle.new(@width, @height)
-square= Rectangle.new(@width, @height)
+# rectangle= Rectangle.new(:width, :height)
+# square= Rectangle.new(:width, :height)
 
-rectangle= Rectangle.new(10, 20)
-square= Rectangle.new(20, 20)
+# rectangle= Rectangle.new(10, 20)
+# square= Rectangle.new(20, 20)
 
 
-def assert
-  raise "Error!" unless yield
-end
+# def assert
+#   raise "Error!" unless yield
+# end
 
-assert { rectangle.area == 200}
-assert { rectangle.perimeter == 60}
-assert { square.diagonal == 28.284271247461902}
-assert { square.square? == true }
+# assert { rectangle.area == 200}
+# assert { rectangle.perimeter == 60}
+# assert { square.diagonal == 28.284271247461902}
+# assert { square.square? == true }
 
 # 5. Reflection 
 # I can't get the rspec to work! I keep getting a describe error and I can't my finger on why.

@@ -9,12 +9,24 @@
 
 # 3. Initial Solution
 
+
 def super_fizzbuzz(array)
-
-
+buzz_array=[]
+array.map { |number| 
+  if number % 15 == 0
+  	buzz_array << "FizzBuzz"
+  elsif number % 3 == 0
+  	buzz_array << "Fizz"
+  elsif number % 5 == 0
+  	buzz_array << "Buzz" 
+  else
+  	buzz_array << number
+  end
+}
+return buzz_array
 end
 
-
+print super_fizzbuzz([15, 5, 3, 1])
 
 # 4. Refactored Solution
 
